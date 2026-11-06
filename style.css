@@ -1,0 +1,91 @@
+:root {
+  --text: #ffffff;
+  --border: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html { min-height: 100%; background: #0e121a; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font: 500 1.15rem/1.35 "Karla", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: 0.01em;
+  background:
+    radial-gradient(ellipse at 50% 100%, #222d42 0%, rgba(34, 45, 66, 0) 65%),
+    linear-gradient(180deg, #0d1018 0%, #1a2230 100%);
+  background-attachment: fixed;
+}
+
+.page {
+  width: min(100% - 2.5rem, 36rem);
+  margin: 0 auto;
+  padding: 4.5rem 0 5rem;
+  text-align: center;
+}
+
+.avatar {
+  display: block;
+  width: 126px;
+  height: 126px;
+  margin: 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1.6rem 0 2.2rem;
+  font-size: 3.4rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.verified { width: 2.1rem; height: 2.1rem; margin-top: 0.4rem; }
+
+.profile p { margin: 0; }
+.profile .ukraine { margin-top: 2.2rem; }
+
+.links {
+  display: grid;
+  gap: 1rem;
+}
+
+.profile + .links { margin-top: 3.4rem; }
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 3rem;
+  padding: 0.6rem 1rem;
+  color: var(--text);
+  border: 2px solid var(--border);
+  border-radius: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.15s;
+}
+
+.link svg { flex: none; width: 1.4rem; height: 1.4rem; }
+
+.link:hover { background: rgba(255, 255, 255, 0.1); }
+.link:focus-visible { outline: 3px solid #6fa8ff; outline-offset: 3px; }
+
+.support { margin-top: 4.2rem; }
+
+.support h2 {
+  margin: 0 0 2.4rem;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link { transition: none; }
+}
